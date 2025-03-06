@@ -7,8 +7,8 @@ from django.db.models import Q, Sum
 from django.http import HttpResponse
 from django.shortcuts import render, redirect, get_object_or_404
 
-from sacco.app_forms import CustomerForm, DepositForm, LoginForm
-from sacco.models import Customer, Deposit
+#from .app_forms import CustomerForm, DepositForm, LoginForm
+from .models import Customer, Deposit
 
 
 # Create your views here.
@@ -30,9 +30,7 @@ def test(request):
     deposit_count = Deposit.objects.count()
     return HttpResponse(f"Ok, Done, We have {customer_count} customers and {deposit_count} deposits")
 
-# http://localhost:8000/
-# http://localhost:8000/test
-# python manage.py runserver 8001
+
 
 @login_required
 def customers(request):
