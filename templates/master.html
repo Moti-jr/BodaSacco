@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
 
     {% block title %}
-        <title>Sacco</title>
+        <title>BodaSacco</title>
     {% endblock %}
 
     <!-- Latest compiled and minified CSS -->
@@ -27,18 +27,18 @@
 
 <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
     <div class="container">
-        <a class="navbar-brand" href="">Umoja Sacco</a>
+        <a class="navbar-brand" href="">Bodaa Sacco</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="mynavbar">
             <ul class="navbar-nav me-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="{% url 'customers' %}">Customers</a>
+                    <a class="nav-link" href="">Customers</a>
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link" href="{% url 'add_customer' %}">Add Customer</a>
+                    <a class="nav-link" href="">Add Customer</a>
                 </li>
 
                 <li class="nav-item">
@@ -50,13 +50,13 @@
                 </li>
 
             </ul>
-            <form class="d-flex" method="get" action="{% url 'search_customer' %}">
+            <form class="d-flex" method="get" action="">
                 <input class="form-control me-2" type="text" name="search" placeholder="Search">
                 <button class="btn btn-primary" type="submit">Search</button>
             </form>
              <ul class="navbar-nav ms-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="{% url 'logout' %}">{{ user.get_full_name  }}</a>
+                    <a class="nav-link" href="">{{ user.get_full_name  }}</a>
                 </li>
              </ul>    
         </div>
